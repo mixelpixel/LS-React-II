@@ -10,14 +10,13 @@ class App extends Component {
       <div>
         <SearchBar />
         {postData.map((data, i) => {
-          return <PostContainer
-            key={data.imageUrl}
-	    thumbnail={data.thumbnailUrl}
-	    img={data.imageUrl}
-	    username={data.username}
-	    comments={data.comments}
-	    likes={data.likes}
-	  />
+          return <PostContainer key={i}
+                                thumbnail={data.thumbnailUrl}
+                                img={data.imageUrl}
+                                username={data.username}
+                                comments={data.comments}
+                                likes={data.likes}
+        	       />
         })}
       </div>
     )
